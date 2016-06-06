@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace CodeMaster.Domain
@@ -81,6 +82,13 @@ namespace CodeMaster.Domain
                 ConnectedWith = connectedByColor
 
             });
+        }
+
+        public int[] ResolvePath(int startPoint, int endPoint, Color[] actionToken)
+        {
+            if (!IsNodeExists(startPoint) || !IsNodeExists(endPoint)) return null;
+
+            return null; 
         }
 
         private bool IsNodeExists(int id)
